@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Postfix Logarithm Expression Evaluator</title>
+    <link href="header.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+  <h1><a class="homelink" href="../">Abstract Mathematics and Friends</a></h1>
+  <h2>Postfix Logarithm Expression Evaluator</h2>
+  </div>
+    <h2>Evaluate various expressions with a small handful of operations</h2>
+    <p>Enter a phrase into the main textarea. Variable fields will be automatically created.</p>
+    <textarea  id="eq" oninput="eqEnter()">xlyl+j</textarea>
+    <p>Value: <span id="output"></span></p>
+    <div id="vardiv"></div>
+
+    <div class="examples">
+    <h3>Example Expressions</h3>
+    <table>
+      
+    <tr><td>Add x and y: </td><td><span class="code">xy+</span></td></tr>
+    <tr><td>Subtract y from x: </td><td><span class="code">xy-</span></td></tr>
+    <tr><td>Take the log of x: </td><td><span class="code">xl</span></td></tr>
+    <tr><td>Take the antilog of x: </td><td><span class="code">xj</span></td></tr>
+    <tr><td>Multiply x and y: </td><td><span class="code">xlyl+j</span></td></tr>
+    <tr><td>Divide x by y: </td><td><span class="code">xlyl-j</span></td></tr>
+    <tr><td>Raise b to the xth power: </td><td><span class="code">bllxl+jj</span></td></tr>
+    <tr><td>nth root of x: </td><td><span class="code">xllnl-jj</span></td></tr>
+    <tr><td>e to the i times t: </td><td><span class="code">tlil+jj</span></td></tr>
+    <tr><td>Hyperbolic cosine: </td><td><span class="code">xj0x-j+l2l-j</span></td></tr>
+    <tr><td>Hyperbolic sine: </td><td><span class="code">xj0x-j-l2l-j</span></td></tr>
+    <tr><td>Cosine: </td><td><span class="code">xlil+jj0x-lil+jj+l2l-j</span></td></tr>
+    <tr><td>Sine: </td><td><span class="code">xlil+jj0x-lil+jj-l2l-il-j</span></td></tr>
+    </table>
+    </div>
+
+    <div>
+      <h3>Explanation</h3>
+      <p>
+        Postfix notation, also known as Reverse Polisn Notation (RPN) is a way of writing expressions so that they can be evaluated strictly from left to right. Unlike infix notation, where operators come between operands, postfix notation places its operators after the operands. Instead of writing <span class="code">A + B</span>, postfix notation would write <span class="code">A B +</span>. This greatly reduces the computational complexity of evaluating statements, and can eliminate confusion centered around order of operations.
+      </p>
+      <p>
+        This calculator is special, not because of its input method, but because it has a limited yet powerful command set. The four mathematical commands available to this calculator includes only the following:
+      </p>
+      <table>
+        <tr><td>Addition:</td><td><span class="code">+</span></td></tr>
+        <tr><td>Subtraction:</td><td><span class="code">-</span></td></tr>
+        <tr><td>Logaritm:</td><td><span class="code">l</span></td></tr>
+        <tr><td>Antilogarithm:</td><td><span class="code">j</span></td></tr>
+      </table>
+      <p>
+        Despite what may seem to be an over-simplified set of commands, these four are enough to multiply, divide, and take roots. If complex numbers are included, it is possible to construct trigonometric functions as well. 
+      </p>
+      <p>
+        To make entry easier, there are a handful of defined constants understood by this calculator.
+      </p>
+      <table>
+        <tr><td>Pi:</td><td><span class="code">p</span></td></tr>
+        <tr><td>The imaginary unit:</td><td><span class="code">i</span></td></tr>
+        <tr><td>Euler's number:</td><td><span class="code">e</span></td></tr>
+        <tr><td>Integers 0 through 9:</td><td><span class="code">0</span><span class="code">1</span><span class="code">2</span><span class="code">...</span></td></tr>
+      </table>
+      <p>
+        Historically, logarithms have been used to multiply numbers before. This dates back to John Napier, a Scottish mathematician. The relationship between additions of logaritms was used in the creation of slide rules, the mechanical calculators used before the invention of the electronic pocket calculator. When multiplying large numbers with a desire for accuracy, some mathematicians would use tables of logarithm values to multiply through the addition of logs. This calculator serves to highlight the usage of logarithm techniques without using cumbersome tomes or coarsely accurate slide rules. 
+      </p>
+    </div>
+    <script src="complex.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
